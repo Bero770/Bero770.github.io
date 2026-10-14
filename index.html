@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bero | Product Manager at Everich</title>
-<meta name="description" content="Bero, Product Manager at Everich. Stainless steel drinkware with custom colors, logos and packaging, from first sample to shipment.">
+<meta name="description" content="Bero, Product Manager at Everich. Custom stainless steel drinkware for European brands: colors, logos and packaging, from first sample to shipment.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bero | Product Manager at Everich">
-<meta property="og:description" content="Stainless steel drinkware with custom colors, logos and packaging, from first sample to shipment.">
+<meta property="og:description" content="Custom stainless steel drinkware for European brands: colors, logos and packaging, from first sample to shipment.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232D5BFF'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EB%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -97,6 +97,13 @@
   .row dt { font-weight: 800; font-size: 1.1rem; }
   .row dd { margin: 0; max-width: 36em; color: var(--muted); }
 
+  .steps { list-style: none; margin: 0 0 8px; padding: 0; counter-reset: step; border-bottom: 1px solid var(--line); }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 12px; padding: 20px 0; border-top: 1px solid var(--line); }
+  .steps li::before { content: counter(step); font-weight: 800; font-size: 1.4rem; line-height: 1.3; color: var(--accent); }
+  .steps b { display: block; font-size: 1.1rem; }
+  .steps span { color: var(--muted); max-width: 36em; display: block; }
+  .rows-gap { margin-top: 40px; }
+
   .contact-lead { margin: 0 0 20px; color: var(--muted); max-width: 30em; }
   .email {
     display: inline-block; font-size: clamp(1.4rem, 4.6vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em;
@@ -138,9 +145,9 @@
       <div>
         <h1 data-en="Hi, I'm Bero." data-zh="我是 Bero。">Hi, I'm Bero.</h1>
         <p class="role" data-en="Product Manager at Everich, based in Hangzhou, China" data-zh="Everich 产品经理，常驻中国杭州">Product Manager at Everich, based in Hangzhou, China</p>
-        <p class="lead" data-en="I help brands put their own name on stainless steel drinkware, from the first sample to the shipped carton." data-zh="我帮助品牌把自己的名字做到不锈钢水具上，从第一个样品到发货出库。">I help brands put their own name on stainless steel drinkware, from the first sample to the shipped carton.</p>
+        <p class="lead" data-en="I help European brands put their own name on stainless steel drinkware, from the first sample to the shipped carton." data-zh="我帮助欧洲品牌把自己的名字做到不锈钢水具上，从第一个样品到发货出库。">I help European brands put their own name on stainless steel drinkware, from the first sample to the shipped carton.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="mailto:sunyibo77@gmail.com" data-en="Email me" data-zh="发邮件给我">Email me</a>
+          <a class="btn btn-primary" id="quoteBtn" href="mailto:sunyibo77@gmail.com" data-en="Request a quote" data-zh="询价">Request a quote</a>
           <a class="btn btn-ghost" href="https://www.instagram.com/berobottle/" target="_blank" rel="noopener" data-en="See Instagram" data-zh="看看 Instagram">See Instagram</a>
         </div>
       </div>
@@ -201,7 +208,43 @@
         </div>
         <div class="row">
           <dt data-en="Markets" data-zh="市场">Markets</dt>
-          <dd data-en="Buyers in Europe, North America, the Middle East and Asia." data-zh="欧洲、北美、中东和亚洲的买家。">Buyers in Europe, North America, the Middle East and Asia.</dd>
+          <dd data-en="Brands and buyers across the Nordics and Europe." data-zh="北欧和欧洲的品牌与买家。">Brands and buyers across the Nordics and Europe.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="process">
+      <h2 data-en="How we work" data-zh="合作流程">How we work</h2>
+      <ol class="steps">
+        <li><div><b data-en="Send your brief" data-zh="发送需求">Send your brief</b><span data-en="Product, quantity per color, colors, logo and packaging ideas, and destination." data-zh="产品、每色数量、颜色、Logo 和包装想法、目的地。">Product, quantity per color, colors, logo and packaging ideas, and destination.</span></div></li>
+        <li><div><b data-en="Quote" data-zh="报价">Quote</b><span data-en="I send a clear quote for the full specification." data-zh="我按完整规格给出清晰的报价。">I send a clear quote for the full specification.</span></div></li>
+        <li><div><b data-en="Sample" data-zh="打样">Sample</b><span data-en="Custom samples in 7 to 14 days, depending on the level of customization." data-zh="定制样品 7 到 14 天，视定制细节而定。">Custom samples in 7 to 14 days, depending on the level of customization.</span></div></li>
+        <li><div><b data-en="Confirm and PI" data-zh="确认并出 PI">Confirm and PI</b><span data-en="After the sample is approved, I issue the proforma invoice." data-zh="样品确认后，我出具 PI 形式发票。">After the sample is approved, I issue the proforma invoice.</span></div></li>
+        <li><div><b data-en="Bulk production" data-zh="大货生产">Bulk production</b><span data-en="Typically within 45 days." data-zh="通常在 45 天内完成。">Typically within 45 days.</span></div></li>
+        <li><div><b data-en="Shipping" data-zh="发货">Shipping</b><span data-en="I can arrange shipping to your destination." data-zh="我可以为你安排货运到目的地。">I can arrange shipping to your destination.</span></div></li>
+      </ol>
+      <dl class="rows rows-gap">
+        <div class="row">
+          <dt data-en="Minimum order" data-zh="起订量">Minimum order</dt>
+          <dd data-en="1000 pcs per color. Small-batch trial orders in black and custom samples are available." data-zh="每色 1000 件起订。支持黑色小批量试单和定制样品。">1000 pcs per color. Small-batch trial orders in black and custom samples are available.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="audits">
+      <h2 data-en="Audits and certifications" data-zh="审核与认证">Audits and certifications</h2>
+      <dl class="rows">
+        <div class="row">
+          <dt data-en="Social compliance" data-zh="社会责任">Social compliance</dt>
+          <dd>BSCI, Sedex</dd>
+        </div>
+        <div class="row">
+          <dt data-en="Management systems" data-zh="管理体系">Management systems</dt>
+          <dd data-en="ISO 9001 (quality), ISO 14001 (environment)" data-zh="ISO 9001（质量）、ISO 14001（环境）">ISO 9001 (quality), ISO 14001 (environment)</dd>
+        </div>
+        <div class="row">
+          <dt data-en="Customer audits" data-zh="客户验厂">Customer audits</dt>
+          <dd data-en="Factory audits passed for Walmart, Costco and Starbucks." data-zh="已通过 Walmart、Costco 和 Starbucks 的验厂。">Factory audits passed for Walmart, Costco and Starbucks.</dd>
         </div>
       </dl>
     </section>
@@ -245,6 +288,14 @@
     });
     chips.forEach(function (c) { c.setAttribute('aria-label', c.getAttribute('data-name-' + lang)); });
     colorName.textContent = current.getAttribute('data-name-' + lang);
+    var qb = document.getElementById('quoteBtn');
+    if (qb) {
+      var subject = lang === 'zh' ? '询价：产品名称' : 'Quote request: [product]';
+      var body = lang === 'zh'
+        ? ['你好 Bero，', '', '我想询价，信息如下：', '', '产品 / 型号：', '每色数量：', '颜色：', 'Logo 与定制要求：', '包装要求：', '目的地国家：', '公司和网站：', '', '谢谢。']
+        : ['Hi Bero,', '', 'I would like to request a quote.', '', 'Product / model:', 'Quantity per color:', 'Colors:', 'Logo and customization:', 'Packaging:', 'Destination country:', 'Company and website:', '', 'Thank you.'];
+      qb.href = 'mailto:sunyibo77@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\r\n'));
+    }
     shots.forEach(function (im, n) {
       im.alt = (lang === 'zh' ? 'Everich 咖啡杯，' : 'Everich coffee tumbler in ') + chips[n].getAttribute('data-name-' + lang).toLowerCase();
     });
