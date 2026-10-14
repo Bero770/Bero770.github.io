@@ -17,7 +17,6 @@
     --muted: #566676;
     --line: #D7DFE6;
     --accent: #2D5BFF;
-    --bottle: #2D5BFF;
     --font: ui-sans-serif, -apple-system, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   }
   * { box-sizing: border-box; }
@@ -66,18 +65,19 @@
   .btn-ghost { background: transparent; color: var(--ink); }
   .btn-ghost:hover { background: var(--ink); color: #fff; }
 
-  /* Bottle stage */
-  .stage { background: var(--surface); border-radius: 28px; padding: 28px 24px 24px; text-align: center; border: 1px solid var(--line); }
-  .bottle { display: block; height: 340px; width: auto; margin: 0 auto 18px; max-width: 100%; }
-  .bottle .body { fill: var(--bottle); transition: fill .35s ease; }
+  /* Product stage */
+  .stage { background: var(--surface); border-radius: 28px; padding: 20px 20px 24px; text-align: center; border: 1px solid var(--line); }
+  .shots { position: relative; aspect-ratio: 1 / 1; width: 100%; max-width: 420px; margin: 0 auto 8px; }
+  .shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .3s ease; }
+  .shots img.is-active { opacity: 1; }
   .stage-label { margin: 0 0 14px; font-size: 0.95rem; color: var(--muted); }
   .stage-label strong { color: var(--ink); }
-  .chips { display: flex; justify-content: center; gap: 12px; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
   .chip {
-    width: 36px; height: 36px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
-    box-shadow: inset 0 0 0 2px rgba(255,255,255,.7), 0 0 0 1px var(--line);
+    width: 34px; height: 34px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(19,32,45,.22);
   }
-  .chip[aria-pressed="true"] { box-shadow: inset 0 0 0 3px #fff, 0 0 0 2.5px var(--ink); }
+  .chip[aria-pressed="true"] { box-shadow: inset 0 0 0 1px rgba(19,32,45,.22), 0 0 0 3px var(--surface), 0 0 0 5px var(--ink); }
 
   /* Sections */
   section { padding: 72px 0; border-top: 1px solid var(--line); }
@@ -118,7 +118,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .bottle .body, .btn { transition: none; }
+    .shots img, .btn { transition: none; }
   }
 </style>
 </head>
@@ -146,23 +146,26 @@
       </div>
 
       <div class="stage">
-        <svg class="bottle" viewBox="0 0 160 380" role="img" aria-label="Insulated bottle shown in the selected powder-coat color">
-          <ellipse cx="80" cy="372" rx="48" ry="6" fill="#13202D" opacity=".12"/>
-          <rect x="54" y="6" width="52" height="34" rx="10" fill="#13202D"/>
-          <rect x="62" y="38" width="36" height="22" fill="#C9D2DA"/>
-          <path class="body" d="M40 74 Q40 60 54 60 H106 Q120 60 120 74 V348 Q120 368 100 368 H60 Q40 368 40 348 Z"/>
-          <rect x="40" y="108" width="80" height="3" fill="#fff" opacity=".35"/>
-          <rect x="52" y="124" width="8" height="220" rx="4" fill="#fff" opacity=".28"/>
-          <circle cx="86" cy="236" r="24" fill="none" stroke="#fff" stroke-width="2.5" opacity=".9"/>
-          <text x="86" y="246" text-anchor="middle" font-size="28" font-weight="800" fill="#fff" font-family="Arial, sans-serif">B</text>
-        </svg>
-        <p class="stage-label"><span data-en="Powder-coat color:" data-zh="喷塑颜色：">Powder-coat color:</span> <strong id="colorName">Cobalt</strong></p>
-        <div class="chips" role="group" aria-label="Powder-coat color">
-          <button type="button" class="chip" style="background:#2D5BFF" data-color="#2D5BFF" data-name-en="Cobalt" data-name-zh="钴蓝" aria-label="Cobalt" aria-pressed="true"></button>
-          <button type="button" class="chip" style="background:#2FBF9B" data-color="#2FBF9B" data-name-en="Mint" data-name-zh="薄荷绿" aria-label="Mint" aria-pressed="false"></button>
-          <button type="button" class="chip" style="background:#FF5A5F" data-color="#FF5A5F" data-name-en="Coral" data-name-zh="珊瑚红" aria-label="Coral" aria-pressed="false"></button>
-          <button type="button" class="chip" style="background:#FFC933" data-color="#FFC933" data-name-en="Sun" data-name-zh="日光黄" aria-label="Sun" aria-pressed="false"></button>
-          <button type="button" class="chip" style="background:#2B3440" data-color="#2B3440" data-name-en="Graphite" data-name-zh="石墨灰" aria-label="Graphite" aria-pressed="false"></button>
+        <div class="shots">
+          <img src="tumbler-black.jpg" alt="Everich coffee tumbler in black" width="800" height="800" class="is-active">
+          <img src="tumbler-blue.jpg" alt="Everich coffee tumbler in blue" width="800" height="800">
+          <img src="tumbler-grey.jpg" alt="Everich coffee tumbler in grey" width="800" height="800">
+          <img src="tumbler-teal.jpg" alt="Everich coffee tumbler in teal" width="800" height="800">
+          <img src="tumbler-green.jpg" alt="Everich coffee tumbler in green" width="800" height="800">
+          <img src="tumbler-purple.jpg" alt="Everich coffee tumbler in purple" width="800" height="800">
+          <img src="tumbler-taro.jpg" alt="Everich coffee tumbler in taro" width="800" height="800">
+          <img src="tumbler-white.jpg" alt="Everich coffee tumbler in white" width="800" height="800">
+        </div>
+        <p class="stage-label"><span data-en="Color:" data-zh="颜色：">Color:</span> <strong id="colorName">Black</strong></p>
+        <div class="chips" role="group" aria-label="Color">
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#353535 50%,#424242 50%)" data-name-en="Black" data-name-zh="黑色" aria-label="Black" aria-pressed="true"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#c2ddf2 50%,#cceefc 50%)" data-name-en="Blue" data-name-zh="蓝色" aria-label="Blue" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#dbd5d5 50%,#eae4e4 50%)" data-name-en="Grey" data-name-zh="灰色" aria-label="Grey" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#11c9c4 50%,#31eae5 50%)" data-name-en="Teal" data-name-zh="青绿色" aria-label="Teal" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#496455 50%,#e1ebe2 50%)" data-name-en="Green" data-name-zh="绿色" aria-label="Green" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#705485 50%,#c2a6d7 50%)" data-name-en="Purple" data-name-zh="紫色" aria-label="Purple" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#7e6f88 50%,#eae1f2 50%)" data-name-en="Taro" data-name-zh="香芋色" aria-label="Taro" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#353535 50%,#e6e6e6 50%)" data-name-en="White" data-name-zh="白色" aria-label="White" aria-pressed="false"></button>
         </div>
       </div>
     </div>
@@ -226,7 +229,7 @@
     if (browserZh) { lang = 'zh'; }
   }
 
-  var stage = document.querySelector('.stage');
+  var shots = document.querySelectorAll('.shots img');
   var chips = document.querySelectorAll('.chip');
   var colorName = document.getElementById('colorName');
   var current = chips[0];
@@ -242,6 +245,9 @@
     });
     chips.forEach(function (c) { c.setAttribute('aria-label', c.getAttribute('data-name-' + lang)); });
     colorName.textContent = current.getAttribute('data-name-' + lang);
+    shots.forEach(function (im, n) {
+      im.alt = (lang === 'zh' ? 'Everich 咖啡杯，' : 'Everich coffee tumbler in ') + chips[n].getAttribute('data-name-' + lang).toLowerCase();
+    });
   }
 
   document.querySelectorAll('.lang button').forEach(function (b) {
@@ -256,7 +262,8 @@
     c.addEventListener('click', function () {
       current = c;
       chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
-      stage.style.setProperty('--bottle', c.getAttribute('data-color'));
+      var idx = Array.prototype.indexOf.call(chips, c);
+      shots.forEach(function (im, n) { im.classList.toggle('is-active', n === idx); });
       apply();
     });
   });
