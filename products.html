@@ -93,10 +93,17 @@
 
     <div class="grid">
       <a class="card" href="product-coffee-tumbler.html">
-        <img src="tumbler-black.jpg" alt="Everich coffee tumbler in black" width="800" height="800">
+        <img src="tumbler-black.jpg" alt="Everich coffee tumbler in black" width="800" height="800" data-alt-en="Everich coffee tumbler in black" data-alt-zh="Everich 咖啡杯，黑色">
         <div class="card-body">
           <h2 data-en="Coffee tumbler" data-zh="咖啡随行杯">Coffee tumbler</h2>
           <p data-en="Available in 8 colors. MOQ 1000 pcs per color." data-zh="提供 8 种颜色。每色 1000 件起订。">Available in 8 colors. MOQ 1000 pcs per color.</p>
+        </div>
+      </a>
+      <a class="card" href="product-bottle-32oz.html">
+        <img src="bottle32-red.jpg" alt="Everich 32oz bottle with storage base" width="800" height="800" data-alt-en="Everich 32oz bottle with 8oz storage base" data-alt-zh="Everich 32oz 保温瓶，带 8oz 底部储物盒">
+        <div class="card-body">
+          <h2 data-en="32oz bottle with storage base" data-zh="32oz 保温瓶（带底部储物盒）">32oz bottle with storage base</h2>
+          <p data-en="8oz storage box in the base. Available in 4 colors. MOQ 1000 pcs per color." data-zh="底部带 8oz 储物盒。提供 4 种颜色。每色 1000 件起订。">8oz storage box in the base. Available in 4 colors. MOQ 1000 pcs per color.</p>
         </div>
       </a>
     </div>
@@ -104,7 +111,7 @@
     <section class="more">
       <h2 data-en="Looking for something else?" data-zh="想找其他产品？">Looking for something else?</h2>
       <p data-en="I also work on vacuum insulated bottles, mugs and shaker bottles. Tell me what you need and I will send you the options." data-zh="我也做真空保温瓶、马克杯和摇摇杯。告诉我你的需求，我会把合适的款式发给你。">I also work on vacuum insulated bottles, mugs and shaker bottles. Tell me what you need and I will send you the options.</p>
-      <a class="btn" id="askBtn" href="mailto:sunyibo77@gmail.com" data-en="Email me" data-zh="发邮件给我">Email me</a>
+      <a class="btn" id="askBtn" href="mailto:bero@everich.com" data-en="Email me" data-zh="发邮件给我">Email me</a>
     </section>
   </main>
 
@@ -132,15 +139,16 @@
     document.querySelectorAll('.lang button').forEach(function (b) {
       b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
     });
-    var img = document.querySelector('.card img');
-    if (img) { img.alt = lang === 'zh' ? 'Everich 咖啡杯，黑色' : 'Everich coffee tumbler in black'; }
+    document.querySelectorAll('.card img').forEach(function (im) {
+      im.alt = im.getAttribute('data-alt-' + lang);
+    });
     var ab = document.getElementById('askBtn');
     if (ab) {
       var subject = lang === 'zh' ? '产品咨询' : 'Product enquiry';
       var body = lang === 'zh'
         ? ['你好 Bero，', '', '我想了解的产品：', '每色数量：', '目的地国家：', '公司和网站：', '', '谢谢。']
         : ['Hi Bero,', '', 'I am looking for:', 'Quantity per color:', 'Destination country:', 'Company and website:', '', 'Thank you.'];
-      ab.href = 'mailto:sunyibo77@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\r\n'));
+      ab.href = 'mailto:bero@everich.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\r\n'));
     }
   }
 
