@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee tumbler | Bero, Everich</title>
+<meta name="description" content="Everich coffee tumbler in 8 colors. Custom logo and packaging, MOQ 1000 pcs per color.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coffee tumbler | Bero, Everich">
+<meta property="og:description" content="Everich coffee tumbler in 8 colors. Custom logo and packaging, MOQ 1000 pcs per color.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232D5BFF'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EB%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #F2F5F8;
+    --surface: #FFFFFF;
+    --ink: #13202D;
+    --muted: #566676;
+    --line: #D7DFE6;
+    --accent: #2D5BFF;
+    --font: ui-sans-serif, -apple-system, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font);
+    font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .mark { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; text-decoration: none; }
+  .top-right { display: flex; align-items: center; gap: 20px; }
+  .navlink { font-weight: 700; font-size: 1rem; text-decoration: none; }
+  .navlink:hover { color: var(--accent); }
+  .lang { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .lang button {
+    font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--muted);
+    background: transparent; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+  .back { display: inline-block; margin: 8px 0 24px; font-weight: 700; font-size: 0.95rem; color: var(--muted); }
+  .back:hover { color: var(--accent); }
+
+  .detail { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; padding-bottom: 72px; }
+  .stage { background: var(--surface); border-radius: 28px; padding: 20px 20px 24px; text-align: center; border: 1px solid var(--line); }
+  .shots { position: relative; aspect-ratio: 1 / 1; width: 100%; max-width: 480px; margin: 0 auto 8px; }
+  .shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .3s ease; }
+  .shots img.is-active { opacity: 1; }
+  .stage-label { margin: 0 0 14px; font-size: 0.95rem; color: var(--muted); }
+  .stage-label strong { color: var(--ink); }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .chip {
+    width: 34px; height: 34px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(19,32,45,.22);
+  }
+  .chip[aria-pressed="true"] { box-shadow: inset 0 0 0 1px rgba(19,32,45,.22), 0 0 0 3px var(--surface), 0 0 0 5px var(--ink); }
+
+  h1 { margin: 0 0 16px; font-size: clamp(2.25rem, 6vw, 3.75rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+  .lead { margin: 0 0 28px; max-width: 28em; font-size: 1.15rem; color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem;
+    padding: 14px 24px; border-radius: 12px; border: 1.5px solid var(--ink);
+    transition: background-color .2s, color .2s;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn-ghost { background: transparent; color: var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: #fff; }
+
+  .rows { margin: 0; border-bottom: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 170px 1fr; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
+  .row dt { font-weight: 800; font-size: 1.05rem; }
+  .row dd { margin: 0; color: var(--muted); }
+
+  footer { padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 860px) {
+    .detail { grid-template-columns: 1fr; gap: 36px; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .shots img, .btn { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="index.html">Bero</a>
+    <div class="top-right">
+      <a class="navlink" href="products.html" data-en="Products" data-zh="产品">Products</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <a class="back" href="products.html" data-en="Back to all products" data-zh="返回全部产品">Back to all products</a>
+
+    <div class="detail">
+      <div class="stage">
+        <div class="shots">
+          <img src="tumbler-black.jpg" alt="" width="800" height="800" class="is-active">
+          <img src="tumbler-blue.jpg" alt="" width="800" height="800">
+          <img src="tumbler-grey.jpg" alt="" width="800" height="800">
+          <img src="tumbler-teal.jpg" alt="" width="800" height="800">
+          <img src="tumbler-green.jpg" alt="" width="800" height="800">
+          <img src="tumbler-purple.jpg" alt="" width="800" height="800">
+          <img src="tumbler-taro.jpg" alt="" width="800" height="800">
+          <img src="tumbler-white.jpg" alt="" width="800" height="800">
+        </div>
+        <p class="stage-label"><span data-en="Color:" data-zh="颜色：">Color:</span> <strong id="colorName">Black</strong></p>
+        <div class="chips" role="group" aria-label="Color">
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#353535 50%,#424242 50%)" data-name-en="Black" data-name-zh="黑色" aria-pressed="true"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#c2ddf2 50%,#cceefc 50%)" data-name-en="Blue" data-name-zh="蓝色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#dbd5d5 50%,#eae4e4 50%)" data-name-en="Grey" data-name-zh="灰色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#11c9c4 50%,#31eae5 50%)" data-name-en="Teal" data-name-zh="青绿色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#496455 50%,#e1ebe2 50%)" data-name-en="Green" data-name-zh="绿色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#705485 50%,#c2a6d7 50%)" data-name-en="Purple" data-name-zh="紫色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#7e6f88 50%,#eae1f2 50%)" data-name-en="Taro" data-name-zh="香芋色" aria-pressed="false"></button>
+          <button type="button" class="chip" style="background:linear-gradient(135deg,#353535 50%,#e6e6e6 50%)" data-name-en="White" data-name-zh="白色" aria-pressed="false"></button>
+        </div>
+      </div>
+
+      <div>
+        <h1 data-en="Coffee tumbler" data-zh="咖啡随行杯">Coffee tumbler</h1>
+        <p class="lead" data-en="Stainless steel tumbler in eight colors, ready for your logo and your own packaging." data-zh="不锈钢随行杯，提供八种颜色，可定制你的 Logo 和专属包装。">Stainless steel tumbler in eight colors, ready for your logo and your own packaging.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="quoteBtn" href="mailto:sunyibo77@gmail.com" data-en="Request a quote" data-zh="询价">Request a quote</a>
+          <a class="btn btn-ghost" href="products.html" data-en="All products" data-zh="全部产品">All products</a>
+        </div>
+
+        <dl class="rows">
+          <div class="row">
+            <dt data-en="Colors" data-zh="颜色">Colors</dt>
+            <dd data-en="Black, blue, grey, teal, green, purple, taro, white." data-zh="黑色、蓝色、灰色、青绿色、绿色、紫色、香芋色、白色。">Black, blue, grey, teal, green, purple, taro, white.</dd>
+          </div>
+          <div class="row">
+            <dt data-en="Customization" data-zh="定制">Customization</dt>
+            <dd data-en="Powder-coat colors, logo printing and engraving, custom color boxes and packaging." data-zh="喷塑颜色、Logo 印刷和雕刻、定制彩盒与包装。">Powder-coat colors, logo printing and engraving, custom color boxes and packaging.</dd>
+          </div>
+          <div class="row">
+            <dt data-en="Minimum order" data-zh="起订量">Minimum order</dt>
+            <dd data-en="1000 pcs per color. Small-batch trial orders in black are available." data-zh="每色 1000 件起订。支持黑色小批量试单。">1000 pcs per color. Small-batch trial orders in black are available.</dd>
+          </div>
+          <div class="row">
+            <dt data-en="Samples" data-zh="打样">Samples</dt>
+            <dd data-en="Custom samples in 7 to 14 days, depending on the level of customization." data-zh="定制样品 7 到 14 天，视定制细节而定。">Custom samples in 7 to 14 days, depending on the level of customization.</dd>
+          </div>
+          <div class="row">
+            <dt data-en="Bulk production" data-zh="大货生产">Bulk production</dt>
+            <dd data-en="Typically within 45 days." data-zh="通常在 45 天内完成。">Typically within 45 days.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Bero</footer>
+</div>
+
+<script>
+(function () {
+  var lang = 'en';
+  var browserZh = (navigator.language || '').toLowerCase().indexOf('zh') === 0;
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved === 'zh' || saved === 'en') { lang = saved; }
+    else if (browserZh) { lang = 'zh'; }
+  } catch (e) {
+    if (browserZh) { lang = 'zh'; }
+  }
+
+  var shots = document.querySelectorAll('.shots img');
+  var chips = document.querySelectorAll('.chip');
+  var colorName = document.getElementById('colorName');
+  var current = chips[0];
+
+  function apply() {
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    document.title = lang === 'zh' ? '咖啡随行杯 | Bero, Everich' : 'Coffee tumbler | Bero, Everich';
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    chips.forEach(function (c) { c.setAttribute('aria-label', c.getAttribute('data-name-' + lang)); });
+    colorName.textContent = current.getAttribute('data-name-' + lang);
+    shots.forEach(function (im, n) {
+      im.alt = (lang === 'zh' ? 'Everich 咖啡杯，' : 'Everich coffee tumbler in ') + chips[n].getAttribute('data-name-' + lang).toLowerCase();
+    });
+    var qb = document.getElementById('quoteBtn');
+    var subject = lang === 'zh' ? '询价：咖啡随行杯' : 'Quote request: Coffee tumbler';
+    var body = lang === 'zh'
+      ? ['你好 Bero，', '', '我想询价，信息如下：', '', '产品：咖啡随行杯', '每色数量：', '颜色：', 'Logo 与定制要求：', '包装要求：', '目的地国家：', '公司和网站：', '', '谢谢。']
+      : ['Hi Bero,', '', 'I would like to request a quote.', '', 'Product: Coffee tumbler', 'Quantity per color:', 'Colors:', 'Logo and customization:', 'Packaging:', 'Destination country:', 'Company and website:', '', 'Thank you.'];
+    qb.href = 'mailto:sunyibo77@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\r\n'));
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+      apply();
+    });
+  });
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      current = c;
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      var idx = Array.prototype.indexOf.call(chips, c);
+      shots.forEach(function (im, n) { im.classList.toggle('is-active', n === idx); });
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>

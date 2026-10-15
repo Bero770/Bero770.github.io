@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | Bero, Everich</title>
+<meta name="description" content="Stainless steel drinkware from Everich, customized with your colors, logo and packaging.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Products | Bero, Everich">
+<meta property="og:description" content="Stainless steel drinkware from Everich, customized with your colors, logo and packaging.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232D5BFF'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EB%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #F2F5F8;
+    --surface: #FFFFFF;
+    --ink: #13202D;
+    --muted: #566676;
+    --line: #D7DFE6;
+    --accent: #2D5BFF;
+    --font: ui-sans-serif, -apple-system, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font);
+    font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+  .mark { font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em; text-decoration: none; }
+  .top-right { display: flex; align-items: center; gap: 20px; }
+  .navlink { font-weight: 700; font-size: 1rem; text-decoration: none; }
+  .navlink:hover { color: var(--accent); }
+  .navlink[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+  .lang { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .lang button {
+    font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--muted);
+    background: transparent; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+  .intro { padding: 40px 0 56px; }
+  h1 { margin: 0 0 18px; font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+  .lead { margin: 0; max-width: 30em; font-size: 1.2rem; color: var(--muted); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; padding-bottom: 72px; }
+  .card {
+    display: block; text-decoration: none; background: var(--surface);
+    border: 1.5px solid var(--line); border-radius: 24px; overflow: hidden;
+    transition: border-color .2s;
+  }
+  .card:hover { border-color: var(--ink); }
+  .card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--surface); }
+  .card-body { padding: 20px 24px 26px; border-top: 1px solid var(--line); }
+  .card-body h2 { margin: 0 0 6px; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
+  .card-body p { margin: 0; color: var(--muted); font-size: 1rem; }
+
+  .more { padding: 56px 0 72px; border-top: 1px solid var(--line); }
+  .more h2 { margin: 0 0 14px; font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
+  .more p { margin: 0 0 24px; max-width: 32em; color: var(--muted); }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem;
+    padding: 14px 24px; border-radius: 12px; border: 1.5px solid var(--ink);
+    background: var(--ink); color: #fff; transition: background-color .2s;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); }
+
+  footer { padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+
+  @media (prefers-reduced-motion: reduce) { .card, .btn { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="index.html">Bero</a>
+    <div class="top-right">
+      <a class="navlink" href="products.html" aria-current="page" data-en="Products" data-zh="产品">Products</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h1 data-en="Products" data-zh="产品">Products</h1>
+      <p class="lead" data-en="Stainless steel drinkware, customized with your colors, logo and packaging." data-zh="不锈钢水具，可按你的颜色、Logo 和包装定制。">Stainless steel drinkware, customized with your colors, logo and packaging.</p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="product-coffee-tumbler.html">
+        <img src="tumbler-black.jpg" alt="Everich coffee tumbler in black" width="800" height="800">
+        <div class="card-body">
+          <h2 data-en="Coffee tumbler" data-zh="咖啡随行杯">Coffee tumbler</h2>
+          <p data-en="Available in 8 colors. MOQ 1000 pcs per color." data-zh="提供 8 种颜色。每色 1000 件起订。">Available in 8 colors. MOQ 1000 pcs per color.</p>
+        </div>
+      </a>
+    </div>
+
+    <section class="more">
+      <h2 data-en="Looking for something else?" data-zh="想找其他产品？">Looking for something else?</h2>
+      <p data-en="I also work on vacuum insulated bottles, mugs and shaker bottles. Tell me what you need and I will send you the options." data-zh="我也做真空保温瓶、马克杯和摇摇杯。告诉我你的需求，我会把合适的款式发给你。">I also work on vacuum insulated bottles, mugs and shaker bottles. Tell me what you need and I will send you the options.</p>
+      <a class="btn" id="askBtn" href="mailto:sunyibo77@gmail.com" data-en="Email me" data-zh="发邮件给我">Email me</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Bero</footer>
+</div>
+
+<script>
+(function () {
+  var lang = 'en';
+  var browserZh = (navigator.language || '').toLowerCase().indexOf('zh') === 0;
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved === 'zh' || saved === 'en') { lang = saved; }
+    else if (browserZh) { lang = 'zh'; }
+  } catch (e) {
+    if (browserZh) { lang = 'zh'; }
+  }
+
+  function apply() {
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    document.title = lang === 'zh' ? '产品 | Bero, Everich' : 'Products | Bero, Everich';
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    var img = document.querySelector('.card img');
+    if (img) { img.alt = lang === 'zh' ? 'Everich 咖啡杯，黑色' : 'Everich coffee tumbler in black'; }
+    var ab = document.getElementById('askBtn');
+    if (ab) {
+      var subject = lang === 'zh' ? '产品咨询' : 'Product enquiry';
+      var body = lang === 'zh'
+        ? ['你好 Bero，', '', '我想了解的产品：', '每色数量：', '目的地国家：', '公司和网站：', '', '谢谢。']
+        : ['Hi Bero,', '', 'I am looking for:', 'Quantity per color:', 'Destination country:', 'Company and website:', '', 'Thank you.'];
+      ab.href = 'mailto:sunyibo77@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.join('\r\n'));
+    }
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      lang = b.getAttribute('data-lang');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>

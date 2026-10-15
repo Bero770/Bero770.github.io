@@ -45,6 +45,10 @@
   }
   .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 
+  .top-right { display: flex; align-items: center; gap: 20px; }
+  .navlink { font-weight: 700; font-size: 1rem; text-decoration: none; }
+  .navlink:hover { color: var(--accent); }
+
   /* Hero */
   .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; padding: 40px 0 88px; }
   h1 {
@@ -134,9 +138,12 @@
 <div class="wrap">
   <header class="top">
     <a class="mark" href="#top">Bero</a>
+    <div class="top-right">
+    <a class="navlink" href="products.html" data-en="Products" data-zh="产品">Products</a>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
     </div>
   </header>
 
@@ -148,6 +155,7 @@
         <p class="lead" data-en="I help European brands put their own name on stainless steel drinkware, from the first sample to the shipped carton." data-zh="我帮助欧洲品牌把自己的名字做到不锈钢水具上，从第一个样品到发货出库。">I help European brands put their own name on stainless steel drinkware, from the first sample to the shipped carton.</p>
         <div class="actions">
           <a class="btn btn-primary" id="quoteBtn" href="mailto:sunyibo77@gmail.com" data-en="Request a quote" data-zh="询价">Request a quote</a>
+          <a class="btn btn-ghost" href="products.html" data-en="View products" data-zh="查看产品">View products</a>
           <a class="btn btn-ghost" href="https://www.instagram.com/berobottle/" target="_blank" rel="noopener" data-en="See Instagram" data-zh="看看 Instagram">See Instagram</a>
         </div>
       </div>
